@@ -313,3 +313,32 @@ strong, b {
   color: var(--color-accent);
   line-height: 1;
 }
+/* ===================== Footer ===================== */
+.footer-mistwood {
+  background-color: var(--color-dark);
+  color: #d8d4e2;
+  padding: 3rem 0 1.5rem;
+}
+
+.footer-mistwood h5 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-mistwood a {
+  color: #d8d4e2;
+}
+
+.footer-mistwood a:hover {
+  color: var(--color-accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid #44405499;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #a8a3b8;
+}
