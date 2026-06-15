@@ -120,3 +120,96 @@ strong, b {
     animation: none !important;
   }
 }
+/* ===================== Hero (mist gradient signature) ===================== */
+.mist-hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-bg-section) 0%, #d6cbe8 100%);
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.mist-hero::before,
+.mist-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.mist-hero::before {
+  width: 420px;
+  height: 420px;
+  background: var(--color-accent);
+  top: -120px;
+  left: -100px;
+}
+
+.mist-hero::after {
+  width: 360px;
+  height: 360px;
+  background: var(--color-gold);
+  bottom: -140px;
+  right: -80px;
+  opacity: 0.25;
+}
+
+.mist-hero .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.mist-hero h1 {
+  font-size: 3.2rem;
+}
+
+.mist-hero .lead {
+  font-size: 1.2rem;
+  color: #5a5468;
+}
+
+/* ===================== Buttons ===================== */
+.btn-mistwood {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-mistwood:hover {
+  background-color: var(--color-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-mistwood {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 0.6rem 1.7rem;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-mistwood:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .mist-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .mist-hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+}
