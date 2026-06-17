@@ -3,12 +3,12 @@
    ========================================================== */
 
 :root {
-  --color-primary: #7C6A9C;     /* lavender-plum */
-  --color-accent: #B8A9D9;      /* soft lilac */
-  --color-bg-light: #F7F5FA;    /* near-white */
-  --color-bg-section: #E8E3F0;  /* pale lavender */
-  --color-dark: #2E2A38;        /* deep charcoal-plum */
-  --color-gold: #C9A875;        /* warm gold accent */
+  --color-primary: #7C6A9C;
+  --color-accent: #B8A9D9;
+  --color-bg-light: #F7F5FA;
+  --color-bg-section: #E8E3F0;
+  --color-dark: #2E2A38;
+  --color-gold: #C9A875;
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Jost', sans-serif;
 }
@@ -98,7 +98,7 @@ strong, b {
   filter: brightness(0) invert(1);
 }
 
-/* Skip link for accessibility */
+/* ===================== Skip Link ===================== */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -113,14 +113,7 @@ strong, b {
   left: 0;
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-/* ===================== Hero (mist gradient signature) ===================== */
+/* ===================== Hero ===================== */
 .mist-hero {
   position: relative;
   background: linear-gradient(135deg, var(--color-bg-section) 0%, #d6cbe8 100%);
@@ -169,6 +162,32 @@ strong, b {
   color: #5a5468;
 }
 
+/* ===================== Mist Banner (inner pages) ===================== */
+.mist-banner {
+  position: relative;
+  background-color: var(--color-bg-section);
+  overflow: hidden;
+  padding: 3.5rem 0;
+}
+
+.mist-banner::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  filter: blur(60px);
+  opacity: 0.45;
+  top: -100px;
+  right: -60px;
+}
+
+.mist-banner .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 /* ===================== Buttons ===================== */
 .btn-mistwood {
   background-color: var(--color-primary);
@@ -203,16 +222,6 @@ strong, b {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .mist-hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .mist-hero {
-    padding: 3rem 0;
-    text-align: center;
-  }
-}
 /* ===================== Sections ===================== */
 .section-light {
   padding: 4rem 0;
@@ -232,7 +241,7 @@ strong, b {
   font-size: 2.4rem;
 }
 
-.section-title .subtitle {
+.subtitle {
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -266,6 +275,7 @@ strong, b {
   padding: 1.25rem;
 }
 
+/* ===================== Tags & Labels ===================== */
 .scent-tag {
   display: inline-block;
   background-color: var(--color-bg-section);
@@ -293,11 +303,6 @@ strong, b {
   border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-  .section-title h2 {
-    font-size: 1.9rem;
-  }
-}
 /* ===================== Testimonials ===================== */
 .testimonial-card {
   background-color: #fff;
@@ -313,6 +318,32 @@ strong, b {
   color: var(--color-accent);
   line-height: 1;
 }
+
+/* ===================== Forms ===================== */
+.form-mistwood label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.form-mistwood .form-control {
+  border-radius: 8px;
+  border: 1px solid #d8d2e6;
+  padding: 0.6rem 0.9rem;
+}
+
+.form-mistwood .form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 106, 156, 0.15);
+}
+
+.form-control.is-invalid {
+  border-color: #c0392b;
+}
+
+.form-control.is-valid {
+  border-color: #5cb85c;
+}
+
 /* ===================== Footer ===================== */
 .footer-mistwood {
   background-color: var(--color-dark);
@@ -342,23 +373,26 @@ strong, b {
   text-align: center;
   color: #a8a3b8;
 }
-/* ===================== Mist Banner (inner pages) ===================== */
-.mist-banner {
-  position: relative;
-  background-color: var(--color-bg-section);
-  overflow: hidden;
-  padding: 3.5rem 0;
+
+/* ===================== Responsive ===================== */
+@media (max-width: 768px) {
+  .mist-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .mist-hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .section-title h2 {
+    font-size: 1.9rem;
+  }
 }
 
-.mist-banner::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  filter: blur(60px);
-  opacity: 0.45;
-  top: -100px;
-  right: -60px;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }

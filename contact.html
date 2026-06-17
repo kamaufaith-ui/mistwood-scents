@@ -47,33 +47,67 @@
         <p class="subtitle">Get In Touch</p>
         <h1 class="h2">Contact Us</h1>
         <div class="divider-mist mx-auto"></div>
-        <p class="text-muted mt-2">We'd love to hear from you. Send us a message and we'll get back to you within 24 hours.</p>
+        <p class="text-muted mt-2">We'd love to hear from you. Send us a message and we'll reply within 24 hours.</p>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Info Cards -->
+    <section class="section-tinted py-4">
+      <div class="container">
+        <div class="row g-3 text-center">
+          <div class="col-6 col-md-3">
+            <div class="card-mistwood p-3 h-100">
+              <div style="font-size:1.5rem;">📍</div>
+              <p class="fw-semibold mb-1 small" style="color:var(--color-primary);">Visit Us</p>
+              <p class="mb-0 small text-muted">Ngong Road, Nairobi<br>Mon–Sat, 9am–6pm</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card-mistwood p-3 h-100">
+              <div style="font-size:1.5rem;">📧</div>
+              <p class="fw-semibold mb-1 small" style="color:var(--color-primary);">Email</p>
+              <p class="mb-0 small text-muted">info@mistwoodscents.com<br>Reply within 24hrs</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card-mistwood p-3 h-100">
+              <div style="font-size:1.5rem;">📞</div>
+              <p class="fw-semibold mb-1 small" style="color:var(--color-primary);">Phone</p>
+              <p class="mb-0 small text-muted">+254 712 345 600<br>Mon–Fri, 9am–5pm</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card-mistwood p-3 h-100">
+              <div style="font-size:1.5rem;">🚚</div>
+              <p class="fw-semibold mb-1 small" style="color:var(--color-primary);">Delivery</p>
+              <p class="mb-0 small text-muted">Nairobi: 1–2 days<br>Other towns: 3–5 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
     <section class="section-light">
       <div class="container">
-        <div class="row g-5">
-
-          <!-- Contact Form -->
+        <div class="row justify-content-center">
           <div class="col-lg-7">
-            <h2 class="h4 mb-4">Send us a message</h2>
+            <h2 class="h4 mb-4 text-center">Send us a message</h2>
             <div class="form-mistwood">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="firstName">First Name</label>
-                  <input type="text" id="firstName" class="form-control" placeholder="e.g. Amara">
+                  <input type="text" id="firstName" class="form-control" placeholder="e.g. Faith">
                   <div class="invalid-feedback">Please enter your first name.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="lastName">Last Name</label>
-                  <input type="text" id="lastName" class="form-control" placeholder="e.g. Njeri">
+                  <input type="text" id="lastName" class="form-control" placeholder="e.g. Kamau">
                   <div class="invalid-feedback">Please enter your last name.</div>
                 </div>
                 <div class="col-12">
                   <label for="email">Email Address</label>
-                  <input type="email" id="email" class="form-control" placeholder="e.g. amara@email.com">
+                  <input type="email" id="email" class="form-control" placeholder="e.g. faith@gmail.com">
                   <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="col-12">
@@ -91,41 +125,19 @@
                 <div class="col-12">
                   <label for="message">Message</label>
                   <textarea id="message" class="form-control" rows="5" placeholder="Type your message here..."></textarea>
-                  <div class="invalid-feedback">Please enter your message.</div>
+                  <div class="invalid-feedback">Please enter your message (at least 10 characters).</div>
                 </div>
                 <div class="col-12">
                   <button onclick="validateForm()" class="btn btn-mistwood w-100">Send Message</button>
                 </div>
                 <div class="col-12">
-                  <div id="successMsg" style="display:none;" class="alert mt-3" style="background-color: var(--color-bg-section); color: var(--color-dark); border: 1px solid var(--color-accent); border-radius: 8px; padding: 1rem;">
+                  <div id="successMsg" style="display:none; background-color: var(--color-bg-section); color: var(--color-dark); border: 1px solid var(--color-accent); border-radius: 8px; padding: 1rem;" class="mt-2">
                     ✅ Thank you! Your message has been sent. We'll get back to you within 24 hours.
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Contact Info -->
-          <div class="col-lg-5">
-            <h2 class="h4 mb-4">Other ways to reach us</h2>
-            <div class="card-mistwood p-4 mb-3">
-              <h3 class="h6 mb-1" style="color: var(--color-primary);">📍 Visit Us</h3>
-              <p class="mb-0">Ngong Road, Nairobi, Kenya<br>Open Mon–Sat, 9am–6pm</p>
-            </div>
-            <div class="card-mistwood p-4 mb-3">
-              <h3 class="h6 mb-1" style="color: var(--color-primary);">📧 Email</h3>
-              <p class="mb-0">info@mistwoodscents.com<br>We reply within 24 hours</p>
-            </div>
-            <div class="card-mistwood p-4 mb-3">
-              <h3 class="h6 mb-1" style="color: var(--color-primary);">📞 Phone</h3>
-              <p class="mb-0">+254 712 345 600<br>Mon–Fri, 9am–5pm</p>
-            </div>
-            <div class="card-mistwood p-4">
-              <h3 class="h6 mb-1" style="color: var(--color-primary);">🚚 Delivery Info</h3>
-              <p class="mb-0">Nairobi: 1–2 days<br>Other towns in Kenya: 3–5 days</p>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -185,8 +197,7 @@
 
       fields.forEach(field => {
         const input = document.getElementById(field.id);
-        const value = input.value;
-        if (!field.check(value)) {
+        if (!field.check(input.value)) {
           input.classList.add('is-invalid');
           input.classList.remove('is-valid');
           isValid = false;
@@ -198,7 +209,6 @@
 
       if (isValid) {
         document.getElementById('successMsg').style.display = 'block';
-        // Clear the form
         fields.forEach(f => {
           const input = document.getElementById(f.id);
           input.value = '';
