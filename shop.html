@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Fragrances | Mistwood Scents</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-mistwood sticky-top">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-mistwood" href="index.html">
+          <span class="brand-mark" aria-hidden="true"></span>Mistwood Scents
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="collections.html">Collections</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Fragrance Guide</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page Banner -->
+    <section class="mist-banner">
+      <div class="container text-center hero-content">
+        <p class="subtitle">All Fragrances</p>
+        <h1 class="h2">Shop Our Collection</h1>
+        <div class="divider-mist mx-auto"></div>
+        <p class="text-muted mt-2">12 fragrances. Search by scent, or filter by category.</p>
+      </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="section-light pb-0">
+      <div class="container">
+
+        <!-- Search bar -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6">
+            <input type="text" id="scentSearch" class="form-control form-control-lg" placeholder="Search by scent... e.g. vanilla, musk, citrus" style="border-radius: 30px; border: 1px solid var(--color-accent); padding: 0.7rem 1.3rem;">
+          </div>
+        </div>
+
+        <!-- Category filters -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="women">For Women</button>
+          <button class="filter-btn" data-category="men">For Men</button>
+          <button class="filter-btn" data-category="unisex">Unisex</button>
+        </div>
+
+        <!-- Active scent tags (filled by JS) -->
+        <div id="activeTags" class="d-flex flex-wrap justify-content-center gap-2 mb-4"></div>
+
+        <p class="text-center text-muted small" id="resultsCount">Showing 12 of 12 fragrances</p>
+
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="section-light pt-0">
+      <div class="container">
+        <div class="row g-4" id="productGrid">
+
+          <div class="col-md-4 product-item" data-category="women" data-notes="lavender bergamot white musk">
+            <div class="card-mistwood">
+              <img src="images/products/lavender-veil.png" alt="Lavender Veil perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Women</span>
+                <h3 class="h5 mb-1">Lavender Veil</h3>
+                <p class="text-muted small mb-2">Lavender · Bergamot · White Musk</p>
+                <p class="price-tag mb-1">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="women" data-notes="rose oud black pepper">
+            <div class="card-mistwood">
+              <img src="images/products/rose-noir.png" alt="Rose Noir perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Women</span>
+                <h3 class="h5 mb-1">Rose Noir</h3>
+                <p class="text-muted small mb-2">Rose · Oud · Black Pepper</p>
+                <p class="price-tag mb-1">KES 4,800 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="women" data-notes="vanilla tonka bean soft musk">
+            <div class="card-mistwood">
+              <img src="images/products/vanilla-dusk.png" alt="Vanilla Dusk perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Women</span>
+                <h3 class="h5 mb-1">Vanilla Dusk</h3>
+                <p class="text-muted small mb-2">Vanilla · Tonka Bean · Soft Musk</p>
+                <p class="price-tag mb-1">KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="women" data-notes="sandalwood pink pepper peony">
+            <div class="card-mistwood">
+              <img src="images/products/pink-santal.png" alt="Pink Santal perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Women</span>
+                <h3 class="h5 mb-1">Pink Santal</h3>
+                <p class="text-muted small mb-2">Sandalwood · Pink Pepper · Peony</p>
+                <p class="price-tag mb-1">KES 2,200 <span class="text-muted small fw-normal">/ 50ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="men" data-notes="amber cedarwood vanilla">
+            <div class="card-mistwood">
+              <img src="images/products/frosted-amber.png" alt="Frosted Amber perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Men</span>
+                <h3 class="h5 mb-1">Frosted Amber</h3>
+                <p class="text-muted small mb-2">Amber · Cedarwood · Vanilla</p>
+                <p class="price-tag mb-1">KES 4,800 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="men" data-notes="oud sandalwood musk">
+            <div class="card-mistwood">
+              <img src="images/products/velvet-oud.png" alt="Velvet Oud perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Men</span>
+                <h3 class="h5 mb-1">Velvet Oud</h3>
+                <p class="text-muted small mb-2">Oud · Sandalwood · Musk</p>
+                <p class="price-tag mb-1">KES 5,000 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="men" data-notes="cedarwood moss vetiver">
+            <div class="card-mistwood">
+              <img src="images/products/forest-rain.png" alt="Forest Rain perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Men</span>
+                <h3 class="h5 mb-1">Forest Rain</h3>
+                <p class="text-muted small mb-2">Cedarwood · Moss · Vetiver</p>
+                <p class="price-tag mb-1">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="men" data-notes="musk tobacco dark amber">
+            <div class="card-mistwood">
+              <img src="images/products/midnight-musk.png" alt="Midnight Musk perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">For Men</span>
+                <h3 class="h5 mb-1">Midnight Musk</h3>
+                <p class="text-muted small mb-2">Musk · Tobacco · Dark Amber</p>
+                <p class="price-tag mb-1">KES 2,500 <span class="text-muted small fw-normal">/ 50ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="unisex" data-notes="eucalyptus sea salt green tea">
+            <div class="card-mistwood">
+              <img src="images/products/morning-mist.png" alt="Morning Mist perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Morning Mist</h3>
+                <p class="text-muted small mb-2">Eucalyptus · Sea Salt · Green Tea</p>
+                <p class="price-tag mb-1">KES 3,500 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="unisex" data-notes="bergamot lemon white flowers">
+            <div class="card-mistwood">
+              <img src="images/products/citrus-bloom.png" alt="Citrus Bloom perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Citrus Bloom</h3>
+                <p class="text-muted small mb-2">Bergamot · Lemon · White Flowers</p>
+                <p class="price-tag mb-1">KES 3,800 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="unisex" data-notes="sea salt driftwood aqua musk">
+            <div class="card-mistwood">
+              <img src="images/products/ocean-breeze.png" alt="Ocean Breeze perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Ocean Breeze</h3>
+                <p class="text-muted small mb-2">Sea Salt · Driftwood · Aqua Musk</p>
+                <p class="price-tag mb-1">KES 4,000 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 product-item" data-category="unisex" data-notes="green tea jasmine musk">
+            <div class="card-mistwood">
+              <img src="images/products/green-tea-mist.png" alt="Green Tea Mist perfume bottle">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Green Tea Mist</h3>
+                <p class="text-muted small mb-2">Green Tea · Jasmine · Musk</p>
+                <p class="price-tag mb-1">KES 1,800 <span class="text-muted small fw-normal">/ 50ml</span></p>
+                <a href="product-detail.html" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p id="noResults" class="text-center text-muted mt-5" style="display:none;">No fragrances match your search. Try a different scent or clear your filters.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-mistwood">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5>Mistwood Scents</h5>
+          <p>Simple, everyday perfumes for women and men. Based in Nairobi, delivering across Kenya.</p>
+        </div>
+        <div class="col-md-2 col-6">
+          <h5>Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="blog.html">Fragrance Guide</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-6">
+          <h5>Support</h5>
+          <ul class="list-unstyled">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Visit Us</h5>
+          <address class="mb-1"><strong>Nairobi, Kenya</strong> — Ngong Road</address>
+          <p class="mb-1">Email: info@mistwoodscents.com</p>
+          <p class="mb-0">Phone: +254 712 345 600</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mistwood Scents. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
