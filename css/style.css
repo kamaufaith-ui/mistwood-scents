@@ -427,3 +427,9 @@ strong, b {
   object-fit: cover;
   border-radius: 12px;
 }
+.section-tinted img {
+  max-height: 450px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
