@@ -421,3 +421,9 @@ strong, b {
   font-weight: 700;
   margin-left: 4px;
 }
+.mist-hero img {
+  max-height: 480px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
