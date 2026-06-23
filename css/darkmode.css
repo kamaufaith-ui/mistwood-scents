@@ -1,0 +1,125 @@
+/* ==========================================================
+   Mistwood Scents — Dark Mode Stylesheet
+   ========================================================== */
+
+/* ===================== Toggle Button ===================== */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===================== Dark Mode Overrides ===================== */
+body.dark-mode {
+  background-color: #1a1720;
+  color: #e8e3f0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e8e3f0;
+}
+
+body.dark-mode .navbar-mistwood {
+  background-color: #2d1f4e;
+  border-bottom: 1px solid #3d2a6e;
+}
+
+body.dark-mode .mist-hero {
+  background: linear-gradient(135deg, #2d1f4e 0%, #1a1720 100%);
+}
+
+body.dark-mode .mist-banner {
+  background-color: #2d1f4e;
+}
+
+body.dark-mode .section-light {
+  background-color: #1a1720;
+}
+
+body.dark-mode .section-tinted {
+  background-color: #231b3a;
+}
+
+body.dark-mode .card-mistwood {
+  background-color: #2a2040;
+  border-color: #3d2a6e;
+  color: #e8e3f0;
+}
+
+body.dark-mode .card-mistwood:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 25px rgba(184, 169, 217, 0.2);
+}
+
+body.dark-mode .testimonial-card {
+  background-color: #2a2040;
+  color: #e8e3f0;
+}
+
+body.dark-mode .text-muted {
+  color: #a89bc0 !important;
+}
+
+body.dark-mode .footer-mistwood {
+  background-color: #110d1a;
+}
+
+body.dark-mode .form-mistwood .form-control {
+  background-color: #2a2040;
+  border-color: #3d2a6e;
+  color: #e8e3f0;
+}
+
+body.dark-mode .form-mistwood .form-control::placeholder {
+  color: #a89bc0;
+}
+
+body.dark-mode .btn-outline-mistwood {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+body.dark-mode .btn-outline-mistwood:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+body.dark-mode strong,
+body.dark-mode b {
+  color: var(--color-accent);
+}
+
+body.dark-mode .filter-btn {
+  background-color: #2a2040;
+  border-color: #3d2a6e;
+  color: #e8e3f0;
+}
+
+body.dark-mode .note-chip {
+  background-color: #2a2040;
+  border-color: #3d2a6e;
+  color: #e8e3f0;
+}
+
+body.dark-mode .scent-tag {
+  background-color: #3d2a6e;
+  color: var(--color-accent);
+}
