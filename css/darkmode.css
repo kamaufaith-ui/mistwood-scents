@@ -123,3 +123,31 @@ body.dark-mode .scent-tag {
   background-color: #3d2a6e;
   color: var(--color-accent);
 }
+/* ===================== FAQ Accordion Dark Mode ===================== */
+body.dark-mode .accordion-item {
+  background-color: #2a2040;
+  border-color: #3d2a6e !important;
+}
+
+body.dark-mode .accordion-button {
+  background-color: #2a2040;
+  color: #e8e3f0;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #3d2a6e;
+  color: var(--color-accent);
+}
+
+body.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
+
+body.dark-mode .accordion-body {
+  background-color: #2a2040;
+  color: #a89bc0;
+}
+
+body.dark-mode .accordion-collapse {
+  background-color: #2a2040;
+}
