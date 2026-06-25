@@ -151,3 +151,10 @@ body.dark-mode .accordion-body {
 body.dark-mode .accordion-collapse {
   background-color: #2a2040;
 }
+.faq-cta {
+  background: var(--color-bg-section);
+}
+
+body.dark-mode .faq-cta {
+  background-color: #2a2040 !important;
+}
