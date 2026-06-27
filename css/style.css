@@ -433,3 +433,8 @@ strong, b {
   object-fit: cover;
   border-radius: 12px;
 }
+/* ===================== Blog Sidebar ===================== */
+.blog-sidebar {
+  position: sticky;
+  top: 80px;
+}
