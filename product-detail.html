@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lavender Veil | Mistwood Scents</title>
-  <meta name="description" content="Lavender Veil by Mistwood Scents — a soft floral fragrance with lavender, bergamot and white musk. Available in 50ml and 100ml.">
+  <title>Product Details | Mistwood Scents</title>
+  <meta name="description" content="View detailed information about Mistwood Scents fragrances including notes, sizes, prices and customer reviews.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/darkmode.css">
 </head>
-<script src="js/product.js"></script>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-mistwood sticky-top">
       <div class="container">
@@ -51,10 +49,21 @@
         <ol class="breadcrumb" style="font-size: 0.85rem;">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Lavender Veil</li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbName">Lavender Veil</li>
         </ol>
       </nav>
     </div>
+
+    <!-- Product Switcher -->
+    <div class="container mb-3">
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="loadProduct('lavender')">Lavender Veil</button>
+        <button class="filter-btn" onclick="loadProduct('rose')">Rose Noir</button>
+        <button class="filter-btn" onclick="loadProduct('frosted')">Frosted Amber</button>
+        <button class="filter-btn" onclick="loadProduct('mist')">Morning Mist</button>
+      </div>
+    </div>
+
     <!-- Product Detail Section -->
     <section class="section-light">
       <div class="container">
@@ -62,49 +71,36 @@
 
           <!-- Product Image -->
           <div class="col-lg-6">
-            <img src="images/products/lavender-veil.png" alt="Mistwood Scents Lavender Veil perfume bottle with lavender sprigs" class="img-fluid rounded shadow-sm" style="width: 100%;">
-            <div class="row g-2 mt-3">
-              <div class="col-3">
-                <img src="images/products/lavender-veil.png" alt="Lavender Veil front view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 2px solid var(--color-primary);">
-              </div>
-              <div class="col-3">
-                <img src="images/products/twilight-bloom.png" alt="Twilight Bloom alternative view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 1px solid var(--color-bg-section);">
-              </div>
-              <div class="col-3">
-                <img src="images/products/morning-mist.png" alt="Morning Mist alternative view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 1px solid var(--color-bg-section);">
-              </div>
-            </div>
+            <img id="productImage" src="images/products/lavender-veil.png" alt="Lavender Veil perfume bottle" class="img-fluid rounded shadow-sm" style="width: 100%;">
           </div>
 
           <!-- Product Info -->
           <div class="col-lg-6">
-            <span class="scent-tag mb-2">For Women</span>
-            <h1 class="h2 mt-2">Lavender Veil</h1>
+            <span class="scent-tag mb-2" id="productCategory">For Women</span>
+            <h1 class="h2 mt-2" id="productName">Lavender Veil</h1>
             <p class="text-muted">By Mistwood Scents · MS Parfumeur</p>
-
-            <!-- Rating -->
-            <p style="color: var(--color-gold);">★★★★★ <span class="text-muted small">4.9 (47 reviews)</span></p>
+            <p style="color: var(--color-gold);" id="productRating">★★★★★ <span class="text-muted small">4.9 (47 reviews)</span></p>
 
             <!-- Price -->
             <div class="mb-4">
-              <p class="price-tag mb-1" style="font-size: 1.4rem;">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
-              <p class="text-muted small">KES 2,200 / 50ml</p>
+              <p class="price-tag mb-1" style="font-size: 1.4rem;" id="price100">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
+              <p class="text-muted small" id="price50">KES 2,200 / 50ml</p>
             </div>
 
-            <!-- Size selector -->
+            <!-- Size Selector -->
             <div class="mb-4">
               <p class="fw-semibold mb-2">Select Size:</p>
               <div class="d-flex gap-2">
-                <button class="btn btn-mistwood btn-sm px-4" id="size100" onclick="selectSize('100ml', 4200)">100ml</button>
-                <button class="btn btn-outline-mistwood btn-sm px-4" id="size50" onclick="selectSize('50ml', 2200)">50ml</button>
+                <button class="btn btn-mistwood btn-sm px-4" id="size100" onclick="selectSize('100ml')">100ml</button>
+                <button class="btn btn-outline-mistwood btn-sm px-4" id="size50" onclick="selectSize('50ml')">50ml</button>
               </div>
-              <p class="text-muted small mt-2" id="selectedSize">Selected: 100ml — KES 4,200</p>
+              <p class="text-muted small mt-2" id="selectedSize">Selected: 100ml</p>
             </div>
 
             <!-- Description -->
             <div class="mb-4">
               <h2 class="h6 fw-semibold mb-2">About this fragrance</h2>
-              <p class="text-muted">Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender's calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.</p>
+              <p class="text-muted" id="productDescription">Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender's calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.</p>
             </div>
 
             <!-- Notes -->
@@ -114,19 +110,19 @@
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Top</p>
-                    <p class="small text-muted mb-0">Bergamot</p>
+                    <p class="small text-muted mb-0" id="noteTop">Bergamot</p>
                   </div>
                 </div>
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Heart</p>
-                    <p class="small text-muted mb-0">Lavender</p>
+                    <p class="small text-muted mb-0" id="noteHeart">Lavender</p>
                   </div>
                 </div>
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Base</p>
-                    <p class="small text-muted mb-0">White Musk</p>
+                    <p class="small text-muted mb-0" id="noteBase">White Musk</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +131,7 @@
             <!-- Details -->
             <div class="mb-4">
               <h2 class="h6 fw-semibold mb-2">Details</h2>
-              <ul class="list-unstyled text-muted small">
+              <ul class="list-unstyled text-muted small" id="productDetails">
                 <li class="mb-1">🏷️ Category: Floral · For Women</li>
                 <li class="mb-1">⏱️ Longevity: 6–8 hours</li>
                 <li class="mb-1">💨 Sillage: Soft, close to skin</li>
@@ -144,12 +140,60 @@
               </ul>
             </div>
 
-            <!-- Order CTA -->
+            <!-- CTA -->
             <div class="d-flex gap-3">
               <a href="contact.html" class="btn btn-mistwood">Order Now</a>
               <a href="shop.html" class="btn btn-outline-mistwood">Back to Shop</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Related Products -->
+    <section class="section-tinted">
+      <div class="container">
+        <div class="section-title">
+          <p class="subtitle">You Might Also Like</p>
+          <h2>Related Fragrances</h2>
+          <div class="divider-mist"></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card-mistwood">
+              <img src="images/products/twilight-bloom.png" alt="Twilight Bloom" loading="lazy">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Twilight Bloom</h3>
+                <p class="text-muted small mb-2">Iris · Violet · Amber Musk</p>
+                <p class="price-tag mb-1">KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mistwood">
+              <img src="images/products/cherry-blossom.png" alt="Cherry Blossom" loading="lazy">
+              <div class="card-body">
+                <span class="scent-tag">For Women</span>
+                <h3 class="h5 mb-1">Cherry Blossom</h3>
+                <p class="text-muted small mb-2">Cherry · Jasmine · Soft Musk</p>
+                <p class="price-tag mb-1">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-mistwood">
+              <img src="images/products/ocean-breeze.png" alt="Ocean Breeze" loading="lazy">
+              <div class="card-body">
+                <span class="scent-tag">Unisex</span>
+                <h3 class="h5 mb-1">Ocean Breeze</h3>
+                <p class="text-muted small mb-2">Sea Salt · Driftwood · Aqua Musk</p>
+                <p class="price-tag mb-1">KES 4,000 <span class="text-muted small fw-normal">/ 100ml</span></p>
+                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -157,7 +201,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="footer-mistwood">
     <div class="container">
       <div class="row g-4">
@@ -197,5 +240,123 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script src="js/theme.js"></script>
+  <script>
+    const products = {
+      lavender: {
+        name: 'Lavender Veil',
+        category: 'For Women',
+        image: 'images/products/lavender-veil.png',
+        rating: '★★★★★ <span class="text-muted small">4.9 (47 reviews)</span>',
+        price100: 'KES 4,200',
+        price50: 'KES 2,200 / 50ml',
+        description: 'Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender\'s calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.',
+        noteTop: 'Bergamot',
+        noteHeart: 'Lavender',
+        noteBase: 'White Musk',
+        details: `<li class="mb-1">🏷️ Category: Floral · For Women</li>
+                  <li class="mb-1">⏱️ Longevity: 6–8 hours</li>
+                  <li class="mb-1">💨 Sillage: Soft, close to skin</li>
+                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
+                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+      },
+      rose: {
+        name: 'Rose Noir',
+        category: 'For Women',
+        image: 'images/products/rose-noir.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (38 reviews)</span>',
+        price100: 'KES 4,800',
+        price50: 'KES 2,500 / 50ml',
+        description: 'Rose Noir is bold and dramatic — a deep rose heart wrapped in oud and lit with black pepper. It\'s not a light scent. It\'s for evenings, for occasions, for the days you want to be remembered. Long-lasting and intensely feminine.',
+        noteTop: 'Black Pepper',
+        noteHeart: 'Rose',
+        noteBase: 'Oud',
+        details: `<li class="mb-1">🏷️ Category: Floral · For Women</li>
+                  <li class="mb-1">⏱️ Longevity: 8–10 hours</li>
+                  <li class="mb-1">💨 Sillage: Strong, projects well</li>
+                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
+                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+      },
+      frosted: {
+        name: 'Frosted Amber',
+        category: 'For Men',
+        image: 'images/products/frosted-amber.png',
+        rating: '★★★★★ <span class="text-muted small">4.7 (52 reviews)</span>',
+        price100: 'KES 4,800',
+        price50: 'KES 2,500 / 50ml',
+        description: 'Frosted Amber is warm and grounding — a rich amber core softened by cedarwood and rounded off with vanilla. It\'s the kind of scent that gets better as the day goes on. Great for work or evenings, and popular with customers who like something substantial.',
+        noteTop: 'Amber',
+        noteHeart: 'Cedarwood',
+        noteBase: 'Vanilla',
+        details: `<li class="mb-1">🏷️ Category: Woody · For Men</li>
+                  <li class="mb-1">⏱️ Longevity: 8–10 hours</li>
+                  <li class="mb-1">💨 Sillage: Medium, noticeable</li>
+                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
+                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+      },
+      mist: {
+        name: 'Morning Mist',
+        category: 'Unisex',
+        image: 'images/products/morning-mist.png',
+        rating: '★★★★☆ <span class="text-muted small">4.6 (61 reviews)</span>',
+        price100: 'KES 3,500',
+        price50: 'KES 1,800 / 50ml',
+        description: 'Morning Mist is clean, light, and effortless. Eucalyptus and green tea keep it fresh while aqua musk gives it just enough body to last. It\'s the perfect everyday scent for anyone who finds most perfumes too heavy for our Nairobi weather.',
+        noteTop: 'Eucalyptus',
+        noteHeart: 'Green Tea',
+        noteBase: 'Sea Salt',
+        details: `<li class="mb-1">🏷️ Category: Fresh · Unisex</li>
+                  <li class="mb-1">⏱️ Longevity: 4–6 hours</li>
+                  <li class="mb-1">💨 Sillage: Light, close to skin</li>
+                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
+                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+      }
+    };
+
+    let currentProduct = 'lavender';
+    let currentSize = '100ml';
+
+    function loadProduct(key) {
+      const p = products[key];
+      currentProduct = key;
+      currentSize = '100ml';
+
+      document.getElementById('productImage').src = p.image;
+      document.getElementById('productImage').alt = p.name;
+      document.getElementById('productName').textContent = p.name;
+      document.getElementById('productCategory').textContent = p.category;
+      document.getElementById('productRating').innerHTML = p.rating;
+      document.getElementById('price100').innerHTML = p.price100 + ' <span class="text-muted small fw-normal">/ 100ml</span>';
+      document.getElementById('price50').textContent = p.price50;
+      document.getElementById('productDescription').textContent = p.description;
+      document.getElementById('noteTop').textContent = p.noteTop;
+      document.getElementById('noteHeart').textContent = p.noteHeart;
+      document.getElementById('noteBase').textContent = p.noteBase;
+      document.getElementById('productDetails').innerHTML = p.details;
+      document.getElementById('breadcrumbName').textContent = p.name;
+      document.getElementById('selectedSize').textContent = 'Selected: 100ml';
+
+      document.getElementById('size100').className = 'btn btn-mistwood btn-sm px-4';
+      document.getElementById('size50').className = 'btn btn-outline-mistwood btn-sm px-4';
+
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectSize(size) {
+      currentSize = size;
+      document.getElementById('selectedSize').textContent = 'Selected: ' + size;
+
+      if (size === '100ml') {
+        document.getElementById('size100').className = 'btn btn-mistwood btn-sm px-4';
+        document.getElementById('size50').className = 'btn btn-outline-mistwood btn-sm px-4';
+      } else {
+        document.getElementById('size50').className = 'btn btn-mistwood btn-sm px-4';
+        document.getElementById('size100').className = 'btn btn-outline-mistwood btn-sm px-4';
+      }
+    }
+  </script>
+
 </body>
 </html>
