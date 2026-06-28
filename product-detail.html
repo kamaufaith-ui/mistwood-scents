@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/darkmode.css">
 </head>
+<script src="js/product.js"></script>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -54,6 +55,105 @@
         </ol>
       </nav>
     </div>
+    <!-- Product Detail Section -->
+    <section class="section-light">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+
+          <!-- Product Image -->
+          <div class="col-lg-6">
+            <img src="images/products/lavender-veil.png" alt="Mistwood Scents Lavender Veil perfume bottle with lavender sprigs" class="img-fluid rounded shadow-sm" style="width: 100%;">
+            <div class="row g-2 mt-3">
+              <div class="col-3">
+                <img src="images/products/lavender-veil.png" alt="Lavender Veil front view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 2px solid var(--color-primary);">
+              </div>
+              <div class="col-3">
+                <img src="images/products/twilight-bloom.png" alt="Twilight Bloom alternative view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 1px solid var(--color-bg-section);">
+              </div>
+              <div class="col-3">
+                <img src="images/products/morning-mist.png" alt="Morning Mist alternative view" class="img-fluid rounded" style="height: 80px; object-fit: cover; width: 100%; cursor: pointer; border: 1px solid var(--color-bg-section);">
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="col-lg-6">
+            <span class="scent-tag mb-2">For Women</span>
+            <h1 class="h2 mt-2">Lavender Veil</h1>
+            <p class="text-muted">By Mistwood Scents · MS Parfumeur</p>
+
+            <!-- Rating -->
+            <p style="color: var(--color-gold);">★★★★★ <span class="text-muted small">4.9 (47 reviews)</span></p>
+
+            <!-- Price -->
+            <div class="mb-4">
+              <p class="price-tag mb-1" style="font-size: 1.4rem;">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
+              <p class="text-muted small">KES 2,200 / 50ml</p>
+            </div>
+
+            <!-- Size selector -->
+            <div class="mb-4">
+              <p class="fw-semibold mb-2">Select Size:</p>
+              <div class="d-flex gap-2">
+                <button class="btn btn-mistwood btn-sm px-4" id="size100" onclick="selectSize('100ml', 4200)">100ml</button>
+                <button class="btn btn-outline-mistwood btn-sm px-4" id="size50" onclick="selectSize('50ml', 2200)">50ml</button>
+              </div>
+              <p class="text-muted small mt-2" id="selectedSize">Selected: 100ml — KES 4,200</p>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-4">
+              <h2 class="h6 fw-semibold mb-2">About this fragrance</h2>
+              <p class="text-muted">Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender's calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.</p>
+            </div>
+
+            <!-- Notes -->
+            <div class="mb-4">
+              <h2 class="h6 fw-semibold mb-3">Fragrance Notes</h2>
+              <div class="row g-2 text-center">
+                <div class="col-4">
+                  <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
+                    <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Top</p>
+                    <p class="small text-muted mb-0">Bergamot</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
+                    <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Heart</p>
+                    <p class="small text-muted mb-0">Lavender</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
+                    <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Base</p>
+                    <p class="small text-muted mb-0">White Musk</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details -->
+            <div class="mb-4">
+              <h2 class="h6 fw-semibold mb-2">Details</h2>
+              <ul class="list-unstyled text-muted small">
+                <li class="mb-1">🏷️ Category: Floral · For Women</li>
+                <li class="mb-1">⏱️ Longevity: 6–8 hours</li>
+                <li class="mb-1">💨 Sillage: Soft, close to skin</li>
+                <li class="mb-1">📦 Available in 50ml and 100ml</li>
+                <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>
+              </ul>
+            </div>
+
+            <!-- Order CTA -->
+            <div class="d-flex gap-3">
+              <a href="contact.html" class="btn btn-mistwood">Order Now</a>
+              <a href="shop.html" class="btn btn-outline-mistwood">Back to Shop</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
