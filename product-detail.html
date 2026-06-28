@@ -49,19 +49,9 @@
         <ol class="breadcrumb" style="font-size: 0.85rem;">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
-          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbName">Lavender Veil</li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbName">Loading...</li>
         </ol>
       </nav>
-    </div>
-
-    <!-- Product Switcher -->
-    <div class="container mb-3">
-      <div class="filter-bar">
-        <button class="filter-btn active" onclick="loadProduct('lavender')">Lavender Veil</button>
-        <button class="filter-btn" onclick="loadProduct('rose')">Rose Noir</button>
-        <button class="filter-btn" onclick="loadProduct('frosted')">Frosted Amber</button>
-        <button class="filter-btn" onclick="loadProduct('mist')">Morning Mist</button>
-      </div>
     </div>
 
     <!-- Product Detail Section -->
@@ -71,28 +61,28 @@
 
           <!-- Product Image -->
           <div class="col-lg-6">
-            <img id="productImage" src="images/products/lavender-veil.png" alt="Lavender Veil perfume bottle" class="img-fluid rounded shadow-sm" style="width: 100%;">
+            <img id="productImage" src="" alt="" class="img-fluid rounded shadow-sm" style="width: 100%;">
           </div>
 
           <!-- Product Info -->
           <div class="col-lg-6">
-            <span class="scent-tag mb-2" id="productCategory">For Women</span>
-            <h1 class="h2 mt-2" id="productName">Lavender Veil</h1>
+            <span class="scent-tag mb-2" id="productCategory"></span>
+            <h1 class="h2 mt-2" id="productName"></h1>
             <p class="text-muted">By Mistwood Scents · MS Parfumeur</p>
-            <p style="color: var(--color-gold);" id="productRating">★★★★★ <span class="text-muted small">4.9 (47 reviews)</span></p>
+            <p style="color: var(--color-gold);" id="productRating"></p>
 
             <!-- Price -->
             <div class="mb-4">
-              <p class="price-tag mb-1" style="font-size: 1.4rem;" id="price100">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
-              <p class="text-muted small" id="price50">KES 2,200 / 50ml</p>
+              <p class="price-tag mb-1" style="font-size: 1.4rem;" id="price100"></p>
+              <p class="text-muted small" id="price50"></p>
             </div>
 
             <!-- Size Selector -->
             <div class="mb-4">
               <p class="fw-semibold mb-2">Select Size:</p>
               <div class="d-flex gap-2">
-                <button class="btn btn-mistwood btn-sm px-4" id="size100" onclick="selectSize('100ml')">100ml</button>
-                <button class="btn btn-outline-mistwood btn-sm px-4" id="size50" onclick="selectSize('50ml')">50ml</button>
+                <button class="btn btn-mistwood btn-sm px-4" id="btn100" onclick="selectSize('100ml')">100ml</button>
+                <button class="btn btn-outline-mistwood btn-sm px-4" id="btn50" onclick="selectSize('50ml')">50ml</button>
               </div>
               <p class="text-muted small mt-2" id="selectedSize">Selected: 100ml</p>
             </div>
@@ -100,7 +90,7 @@
             <!-- Description -->
             <div class="mb-4">
               <h2 class="h6 fw-semibold mb-2">About this fragrance</h2>
-              <p class="text-muted" id="productDescription">Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender's calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.</p>
+              <p class="text-muted" id="productDescription"></p>
             </div>
 
             <!-- Notes -->
@@ -110,19 +100,19 @@
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Top</p>
-                    <p class="small text-muted mb-0" id="noteTop">Bergamot</p>
+                    <p class="small text-muted mb-0" id="noteTop"></p>
                   </div>
                 </div>
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Heart</p>
-                    <p class="small text-muted mb-0" id="noteHeart">Lavender</p>
+                    <p class="small text-muted mb-0" id="noteHeart"></p>
                   </div>
                 </div>
                 <div class="col-4">
                   <div style="background: var(--color-bg-section); border-radius: 10px; padding: 12px 8px;">
                     <p class="small fw-semibold mb-1" style="color: var(--color-primary);">Base</p>
-                    <p class="small text-muted mb-0" id="noteBase">White Musk</p>
+                    <p class="small text-muted mb-0" id="noteBase"></p>
                   </div>
                 </div>
               </div>
@@ -131,13 +121,7 @@
             <!-- Details -->
             <div class="mb-4">
               <h2 class="h6 fw-semibold mb-2">Details</h2>
-              <ul class="list-unstyled text-muted small" id="productDetails">
-                <li class="mb-1">🏷️ Category: Floral · For Women</li>
-                <li class="mb-1">⏱️ Longevity: 6–8 hours</li>
-                <li class="mb-1">💨 Sillage: Soft, close to skin</li>
-                <li class="mb-1">📦 Available in 50ml and 100ml</li>
-                <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>
-              </ul>
+              <ul class="list-unstyled text-muted small" id="productDetails"></ul>
             </div>
 
             <!-- CTA -->
@@ -158,44 +142,7 @@
           <h2>Related Fragrances</h2>
           <div class="divider-mist"></div>
         </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card-mistwood">
-              <img src="images/products/twilight-bloom.png" alt="Twilight Bloom" loading="lazy">
-              <div class="card-body">
-                <span class="scent-tag">Unisex</span>
-                <h3 class="h5 mb-1">Twilight Bloom</h3>
-                <p class="text-muted small mb-2">Iris · Violet · Amber Musk</p>
-                <p class="price-tag mb-1">KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span></p>
-                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-mistwood">
-              <img src="images/products/cherry-blossom.png" alt="Cherry Blossom" loading="lazy">
-              <div class="card-body">
-                <span class="scent-tag">For Women</span>
-                <h3 class="h5 mb-1">Cherry Blossom</h3>
-                <p class="text-muted small mb-2">Cherry · Jasmine · Soft Musk</p>
-                <p class="price-tag mb-1">KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span></p>
-                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-mistwood">
-              <img src="images/products/ocean-breeze.png" alt="Ocean Breeze" loading="lazy">
-              <div class="card-body">
-                <span class="scent-tag">Unisex</span>
-                <h3 class="h5 mb-1">Ocean Breeze</h3>
-                <p class="text-muted small mb-2">Sea Salt · Driftwood · Aqua Musk</p>
-                <p class="price-tag mb-1">KES 4,000 <span class="text-muted small fw-normal">/ 100ml</span></p>
-                <a href="shop.html" class="btn btn-outline-mistwood btn-sm">View in Shop</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row g-4" id="relatedProducts"></div>
       </div>
     </section>
 
@@ -243,119 +190,255 @@
   <script>
     const products = {
       lavender: {
-        name: 'Lavender Veil',
-        category: 'For Women',
+        name: 'Lavender Veil', category: 'For Women',
         image: 'images/products/lavender-veil.png',
         rating: '★★★★★ <span class="text-muted small">4.9 (47 reviews)</span>',
-        price100: 'KES 4,200',
+        price100: 'KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span>',
         price50: 'KES 2,200 / 50ml',
         description: 'Lavender Veil is a soft, everyday floral built around real lavender. It opens with a bright burst of bergamot, settles into lavender\'s calm, and dries down to a clean white musk that stays close to the skin. Light enough for daily wear, long enough to last.',
-        noteTop: 'Bergamot',
-        noteHeart: 'Lavender',
-        noteBase: 'White Musk',
-        details: `<li class="mb-1">🏷️ Category: Floral · For Women</li>
-                  <li class="mb-1">⏱️ Longevity: 6–8 hours</li>
-                  <li class="mb-1">💨 Sillage: Soft, close to skin</li>
-                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
-                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+        noteTop: 'Bergamot', noteHeart: 'Lavender', noteBase: 'White Musk',
+        details: '<li class="mb-1">🏷️ Category: Floral · For Women</li><li class="mb-1">⏱️ Longevity: 6–8 hours</li><li class="mb-1">💨 Sillage: Soft, close to skin</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['rose', 'cherry', 'twilight']
       },
       rose: {
-        name: 'Rose Noir',
-        category: 'For Women',
+        name: 'Rose Noir', category: 'For Women',
         image: 'images/products/rose-noir.png',
         rating: '★★★★★ <span class="text-muted small">4.8 (38 reviews)</span>',
-        price100: 'KES 4,800',
+        price100: 'KES 4,800 <span class="text-muted small fw-normal">/ 100ml</span>',
         price50: 'KES 2,500 / 50ml',
         description: 'Rose Noir is bold and dramatic — a deep rose heart wrapped in oud and lit with black pepper. It\'s not a light scent. It\'s for evenings, for occasions, for the days you want to be remembered. Long-lasting and intensely feminine.',
-        noteTop: 'Black Pepper',
-        noteHeart: 'Rose',
-        noteBase: 'Oud',
-        details: `<li class="mb-1">🏷️ Category: Floral · For Women</li>
-                  <li class="mb-1">⏱️ Longevity: 8–10 hours</li>
-                  <li class="mb-1">💨 Sillage: Strong, projects well</li>
-                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
-                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+        noteTop: 'Black Pepper', noteHeart: 'Rose', noteBase: 'Oud',
+        details: '<li class="mb-1">🏷️ Category: Floral · For Women</li><li class="mb-1">⏱️ Longevity: 8–10 hours</li><li class="mb-1">💨 Sillage: Strong, projects well</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['lavender', 'vanilla', 'saffron']
+      },
+      vanilla: {
+        name: 'Vanilla Dusk', category: 'For Women',
+        image: 'images/products/vanilla-dusk.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (29 reviews)</span>',
+        price100: 'KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,300 / 50ml',
+        description: 'Vanilla Dusk is warm, sweet and comforting. A rich vanilla core sits alongside tonka bean and a soft musk that makes it feel personal and close. It\'s the kind of scent people lean in to smell — subtle but memorable.',
+        noteTop: 'Tonka Bean', noteHeart: 'Vanilla', noteBase: 'Soft Musk',
+        details: '<li class="mb-1">🏷️ Category: Oriental · For Women</li><li class="mb-1">⏱️ Longevity: 7–9 hours</li><li class="mb-1">💨 Sillage: Soft, warm</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['rose', 'pink', 'saffron']
+      },
+      pink: {
+        name: 'Pink Santal', category: 'For Women',
+        image: 'images/products/pink-santal.png',
+        rating: '★★★★★ <span class="text-muted small">4.9 (21 reviews)</span>',
+        price100: 'KES 2,200 <span class="text-muted small fw-normal">/ 50ml only</span>',
+        price50: 'KES 2,200 / 50ml',
+        description: 'Pink Santal is soft and feminine — sandalwood warmed by pink pepper and lifted by peony. It\'s delicate without being forgettable. A great everyday option for anyone who wants something a little different from the usual floral.',
+        noteTop: 'Pink Pepper', noteHeart: 'Peony', noteBase: 'Sandalwood',
+        details: '<li class="mb-1">🏷️ Category: Floral Woody · For Women</li><li class="mb-1">⏱️ Longevity: 6–8 hours</li><li class="mb-1">💨 Sillage: Soft, feminine</li><li class="mb-1">📦 Available in 50ml only</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['lavender', 'cherry', 'vanilla']
       },
       frosted: {
-        name: 'Frosted Amber',
-        category: 'For Men',
+        name: 'Frosted Amber', category: 'For Men',
         image: 'images/products/frosted-amber.png',
         rating: '★★★★★ <span class="text-muted small">4.7 (52 reviews)</span>',
-        price100: 'KES 4,800',
+        price100: 'KES 4,800 <span class="text-muted small fw-normal">/ 100ml</span>',
         price50: 'KES 2,500 / 50ml',
-        description: 'Frosted Amber is warm and grounding — a rich amber core softened by cedarwood and rounded off with vanilla. It\'s the kind of scent that gets better as the day goes on. Great for work or evenings, and popular with customers who like something substantial.',
-        noteTop: 'Amber',
-        noteHeart: 'Cedarwood',
-        noteBase: 'Vanilla',
-        details: `<li class="mb-1">🏷️ Category: Woody · For Men</li>
-                  <li class="mb-1">⏱️ Longevity: 8–10 hours</li>
-                  <li class="mb-1">💨 Sillage: Medium, noticeable</li>
-                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
-                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+        description: 'Frosted Amber is warm and grounding — a rich amber core softened by cedarwood and rounded off with vanilla. It\'s the kind of scent that gets better as the day goes on. Great for work or evenings.',
+        noteTop: 'Amber', noteHeart: 'Cedarwood', noteBase: 'Vanilla',
+        details: '<li class="mb-1">🏷️ Category: Woody · For Men</li><li class="mb-1">⏱️ Longevity: 8–10 hours</li><li class="mb-1">💨 Sillage: Medium, noticeable</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['velvet', 'forest', 'smoky']
+      },
+      velvet: {
+        name: 'Velvet Oud', category: 'For Men',
+        image: 'images/products/velvet-oud.png',
+        rating: '★★★★★ <span class="text-muted small">4.9 (44 reviews)</span>',
+        price100: 'KES 5,000 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,600 / 50ml',
+        description: 'Velvet Oud is rich, deep and long-lasting. Oud and sandalwood form the backbone, with musk keeping it smooth and wearable. This is our most premium scent — a little goes a long way.',
+        noteTop: 'Oud', noteHeart: 'Sandalwood', noteBase: 'Musk',
+        details: '<li class="mb-1">🏷️ Category: Woody Oriental · For Men</li><li class="mb-1">⏱️ Longevity: 10–12 hours</li><li class="mb-1">💨 Sillage: Strong, commanding</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['frosted', 'midnight', 'forest']
+      },
+      forest: {
+        name: 'Forest Rain', category: 'For Men',
+        image: 'images/products/forest-rain.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (33 reviews)</span>',
+        price100: 'KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,200 / 50ml',
+        description: 'Forest Rain smells exactly like it sounds — cedarwood and moss after rainfall, grounded by vetiver. Unique and earthy, it\'s a scent that stands out from the crowd without being loud.',
+        noteTop: 'Cedarwood', noteHeart: 'Moss', noteBase: 'Vetiver',
+        details: '<li class="mb-1">🏷️ Category: Woody · For Men</li><li class="mb-1">⏱️ Longevity: 7–9 hours</li><li class="mb-1">💨 Sillage: Medium, earthy</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['velvet', 'smoky', 'vetiver']
+      },
+      midnight: {
+        name: 'Midnight Musk', category: 'For Men',
+        image: 'images/products/midnight-musk.png',
+        rating: '★★★★☆ <span class="text-muted small">4.6 (18 reviews)</span>',
+        price100: 'KES 2,500 <span class="text-muted small fw-normal">/ 50ml only</span>',
+        price50: 'KES 2,500 / 50ml',
+        description: 'Midnight Musk is dark, smoky and intense. Musk and tobacco create a deep, moody character that dark amber anchors into something long-lasting. Best for evenings and cooler nights.',
+        noteTop: 'Musk', noteHeart: 'Tobacco', noteBase: 'Dark Amber',
+        details: '<li class="mb-1">🏷️ Category: Oriental · For Men</li><li class="mb-1">⏱️ Longevity: 8–10 hours</li><li class="mb-1">💨 Sillage: Strong, moody</li><li class="mb-1">📦 Available in 50ml only</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['velvet', 'frosted', 'vetiver']
       },
       mist: {
-        name: 'Morning Mist',
-        category: 'Unisex',
+        name: 'Morning Mist', category: 'Unisex',
         image: 'images/products/morning-mist.png',
         rating: '★★★★☆ <span class="text-muted small">4.6 (61 reviews)</span>',
-        price100: 'KES 3,500',
+        price100: 'KES 3,500 <span class="text-muted small fw-normal">/ 100ml</span>',
         price50: 'KES 1,800 / 50ml',
-        description: 'Morning Mist is clean, light, and effortless. Eucalyptus and green tea keep it fresh while aqua musk gives it just enough body to last. It\'s the perfect everyday scent for anyone who finds most perfumes too heavy for our Nairobi weather.',
-        noteTop: 'Eucalyptus',
-        noteHeart: 'Green Tea',
-        noteBase: 'Sea Salt',
-        details: `<li class="mb-1">🏷️ Category: Fresh · Unisex</li>
-                  <li class="mb-1">⏱️ Longevity: 4–6 hours</li>
-                  <li class="mb-1">💨 Sillage: Light, close to skin</li>
-                  <li class="mb-1">📦 Available in 50ml and 100ml</li>
-                  <li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>`
+        description: 'Morning Mist is clean, light and effortless. Eucalyptus and green tea keep it fresh while sea salt gives it just enough body to last. The perfect everyday scent for our Nairobi weather.',
+        noteTop: 'Eucalyptus', noteHeart: 'Green Tea', noteBase: 'Sea Salt',
+        details: '<li class="mb-1">🏷️ Category: Fresh · Unisex</li><li class="mb-1">⏱️ Longevity: 4–6 hours</li><li class="mb-1">💨 Sillage: Light, close to skin</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['citrus', 'ocean', 'greentea']
+      },
+      citrus: {
+        name: 'Citrus Bloom', category: 'Unisex',
+        image: 'images/products/citrus-bloom.png',
+        rating: '★★★★★ <span class="text-muted small">4.7 (26 reviews)</span>',
+        price100: 'KES 3,800 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 1,950 / 50ml',
+        description: 'Citrus Bloom is bright, zesty and uplifting. Bergamot and lemon make a sharp, energising opening, softened by white flowers as it settles. A happy, easy scent for any time of day.',
+        noteTop: 'Lemon', noteHeart: 'Bergamot', noteBase: 'White Flowers',
+        details: '<li class="mb-1">🏷️ Category: Fresh Citrus · Unisex</li><li class="mb-1">⏱️ Longevity: 5–7 hours</li><li class="mb-1">💨 Sillage: Light, bright</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['mist', 'ocean', 'coconut']
+      },
+      ocean: {
+        name: 'Ocean Breeze', category: 'Unisex',
+        image: 'images/products/ocean-breeze.png',
+        rating: '★★★★☆ <span class="text-muted small">4.5 (31 reviews)</span>',
+        price100: 'KES 4,000 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,050 / 50ml',
+        description: 'Ocean Breeze is clean and aquatic — sea salt and driftwood with a soft aqua musk that feels like a coastal morning. Light, fresh and great for everyday wear.',
+        noteTop: 'Sea Salt', noteHeart: 'Driftwood', noteBase: 'Aqua Musk',
+        details: '<li class="mb-1">🏷️ Category: Aquatic · Unisex</li><li class="mb-1">⏱️ Longevity: 5–7 hours</li><li class="mb-1">💨 Sillage: Light, airy</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['mist', 'citrus', 'greentea']
+      },
+      greentea: {
+        name: 'Green Tea Mist', category: 'Unisex',
+        image: 'images/products/green-tea-mist.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (14 reviews)</span>',
+        price100: 'KES 1,800 <span class="text-muted small fw-normal">/ 50ml only</span>',
+        price50: 'KES 1,800 / 50ml',
+        description: 'Green Tea Mist is delicate and calming — green tea and jasmine in a soft musk base. It\'s understated and gentle, perfect for days when you want to smell fresh without being noticed.',
+        noteTop: 'Green Tea', noteHeart: 'Jasmine', noteBase: 'Musk',
+        details: '<li class="mb-1">🏷️ Category: Fresh · Unisex</li><li class="mb-1">⏱️ Longevity: 4–6 hours</li><li class="mb-1">💨 Sillage: Very soft, close</li><li class="mb-1">📦 Available in 50ml only</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['mist', 'citrus', 'ocean']
+      },
+      twilight: {
+        name: 'Twilight Bloom', category: 'Unisex',
+        image: 'images/products/twilight-bloom.png',
+        rating: '★★★★★ <span class="text-muted small">4.9 (19 reviews)</span>',
+        price100: 'KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,300 / 50ml',
+        description: 'Twilight Bloom is our most atmospheric scent — iris and violet at the heart, warmed by amber musk. It\'s inspired by lavender fields at dusk, and it feels exactly like that: purple, dreamy, and a little mysterious.',
+        noteTop: 'Iris', noteHeart: 'Violet', noteBase: 'Amber Musk',
+        details: '<li class="mb-1">🏷️ Category: Floral · Unisex</li><li class="mb-1">⏱️ Longevity: 7–9 hours</li><li class="mb-1">💨 Sillage: Medium, dreamy</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['lavender', 'rose', 'ocean']
+      },
+      cherry: {
+        name: 'Cherry Blossom', category: 'For Women',
+        image: 'images/products/cherry-blossom.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (22 reviews)</span>',
+        price100: 'KES 4,200 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,200 / 50ml',
+        description: 'Cherry Blossom is soft and feminine — cherry and jasmine in a gentle musk base. It\'s delicate but lasts well, making it a great everyday scent for school or work.',
+        noteTop: 'Cherry', noteHeart: 'Jasmine', noteBase: 'Soft Musk',
+        details: '<li class="mb-1">🏷️ Category: Floral · For Women</li><li class="mb-1">⏱️ Longevity: 6–8 hours</li><li class="mb-1">💨 Sillage: Soft, delicate</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['lavender', 'pink', 'vanilla']
+      },
+      smoky: {
+        name: 'Smoky Cedar', category: 'For Men',
+        image: 'images/products/smoky-cedar.png',
+        rating: '★★★★★ <span class="text-muted small">4.7 (17 reviews)</span>',
+        price100: 'KES 4,500 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,300 / 50ml',
+        description: 'Smoky Cedar is bold and distinctive. Cedarwood and smoke create a rugged, masculine character that black musk deepens into something long-lasting and serious. Best for evenings or cooler days.',
+        noteTop: 'Smoke', noteHeart: 'Cedarwood', noteBase: 'Black Musk',
+        details: '<li class="mb-1">🏷️ Category: Woody · For Men</li><li class="mb-1">⏱️ Longevity: 8–10 hours</li><li class="mb-1">💨 Sillage: Strong, bold</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['forest', 'velvet', 'midnight']
+      },
+      coconut: {
+        name: 'Coconut Breeze', category: 'Unisex',
+        image: 'images/products/coconut-breeze.png',
+        rating: '★★★★★ <span class="text-muted small">4.7 (23 reviews)</span>',
+        price100: 'KES 3,800 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 1,950 / 50ml',
+        description: 'Coconut Breeze is tropical and easy — coconut and vanilla in a sea salt base that keeps it from being too sweet. It\'s a happy, summery scent that works well in warm weather.',
+        noteTop: 'Coconut', noteHeart: 'Vanilla', noteBase: 'Sea Salt',
+        details: '<li class="mb-1">🏷️ Category: Fresh · Unisex</li><li class="mb-1">⏱️ Longevity: 5–7 hours</li><li class="mb-1">💨 Sillage: Light, tropical</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['citrus', 'ocean', 'mist']
+      },
+      saffron: {
+        name: 'Saffron Gold', category: 'For Women',
+        image: 'images/products/saffron-gold.png',
+        rating: '★★★★★ <span class="text-muted small">4.9 (16 reviews)</span>',
+        price100: 'KES 4,800 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,500 / 50ml',
+        description: 'Saffron Gold is warm, spiced and luxurious. Saffron and rose open brightly before warm amber settles in for the long haul. It\'s rich without being heavy — genuinely one of our most unique scents.',
+        noteTop: 'Saffron', noteHeart: 'Rose', noteBase: 'Warm Amber',
+        details: '<li class="mb-1">🏷️ Category: Oriental · For Women</li><li class="mb-1">⏱️ Longevity: 8–10 hours</li><li class="mb-1">💨 Sillage: Medium, warm</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['rose', 'vanilla', 'twilight']
+      },
+      vetiver: {
+        name: 'Dark Vetiver', category: 'For Men',
+        image: 'images/products/dark-vetiver.png',
+        rating: '★★★★★ <span class="text-muted small">4.8 (12 reviews)</span>',
+        price100: 'KES 4,600 <span class="text-muted small fw-normal">/ 100ml</span>',
+        price50: 'KES 2,400 / 50ml',
+        description: 'Dark Vetiver is earthy, deep and sophisticated. Vetiver and leather create an unmistakably masculine character, with patchouli grounding everything into something complex and long-lasting.',
+        noteTop: 'Vetiver', noteHeart: 'Leather', noteBase: 'Patchouli',
+        details: '<li class="mb-1">🏷️ Category: Woody · For Men</li><li class="mb-1">⏱️ Longevity: 9–11 hours</li><li class="mb-1">💨 Sillage: Strong, earthy</li><li class="mb-1">📦 Available in 50ml and 100ml</li><li class="mb-1">🚚 Delivery: 1–2 days in Nairobi</li>',
+        related: ['forest', 'smoky', 'velvet']
       }
     };
 
-    let currentProduct = 'lavender';
-    let currentSize = '100ml';
-
-    function loadProduct(key) {
-      const p = products[key];
-      currentProduct = key;
-      currentSize = '100ml';
-
-      document.getElementById('productImage').src = p.image;
-      document.getElementById('productImage').alt = p.name;
-      document.getElementById('productName').textContent = p.name;
-      document.getElementById('productCategory').textContent = p.category;
-      document.getElementById('productRating').innerHTML = p.rating;
-      document.getElementById('price100').innerHTML = p.price100 + ' <span class="text-muted small fw-normal">/ 100ml</span>';
-      document.getElementById('price50').textContent = p.price50;
-      document.getElementById('productDescription').textContent = p.description;
-      document.getElementById('noteTop').textContent = p.noteTop;
-      document.getElementById('noteHeart').textContent = p.noteHeart;
-      document.getElementById('noteBase').textContent = p.noteBase;
-      document.getElementById('productDetails').innerHTML = p.details;
-      document.getElementById('breadcrumbName').textContent = p.name;
-      document.getElementById('selectedSize').textContent = 'Selected: 100ml';
-
-      document.getElementById('size100').className = 'btn btn-mistwood btn-sm px-4';
-      document.getElementById('size50').className = 'btn btn-outline-mistwood btn-sm px-4';
-
-      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
     function selectSize(size) {
-      currentSize = size;
       document.getElementById('selectedSize').textContent = 'Selected: ' + size;
-
       if (size === '100ml') {
-        document.getElementById('size100').className = 'btn btn-mistwood btn-sm px-4';
-        document.getElementById('size50').className = 'btn btn-outline-mistwood btn-sm px-4';
+        document.getElementById('btn100').className = 'btn btn-mistwood btn-sm px-4';
+        document.getElementById('btn50').className = 'btn btn-outline-mistwood btn-sm px-4';
       } else {
-        document.getElementById('size50').className = 'btn btn-mistwood btn-sm px-4';
-        document.getElementById('size100').className = 'btn btn-outline-mistwood btn-sm px-4';
+        document.getElementById('btn50').className = 'btn btn-mistwood btn-sm px-4';
+        document.getElementById('btn100').className = 'btn btn-outline-mistwood btn-sm px-4';
       }
     }
+
+    function renderRelated(keys) {
+      const container = document.getElementById('relatedProducts');
+      container.innerHTML = keys.map(key => {
+        const p = products[key];
+        return `
+          <div class="col-md-4">
+            <div class="card-mistwood">
+              <img src="${p.image}" alt="${p.name}" loading="lazy" style="height:240px;object-fit:cover;width:100%;">
+              <div class="card-body">
+                <span class="scent-tag">${p.category}</span>
+                <h3 class="h5 mb-1">${p.name}</h3>
+                <p class="price-tag mb-1">${p.price100}</p>
+                <a href="product-detail.html?product=${key}" class="btn btn-outline-mistwood btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    // Read URL parameter and load the right product
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('product') || 'lavender';
+    const p = products[key] || products['lavender'];
+
+    document.title = p.name + ' | Mistwood Scents';
+    document.getElementById('breadcrumbName').textContent = p.name;
+    document.getElementById('productImage').src = p.image;
+    document.getElementById('productImage').alt = p.name;
+    document.getElementById('productName').textContent = p.name;
+    document.getElementById('productCategory').textContent = p.category;
+    document.getElementById('productRating').innerHTML = p.rating;
+    document.getElementById('price100').innerHTML = p.price100;
+    document.getElementById('price50').textContent = p.price50;
+    document.getElementById('productDescription').textContent = p.description;
+    document.getElementById('noteTop').textContent = p.noteTop;
+    document.getElementById('noteHeart').textContent = p.noteHeart;
+    document.getElementById('noteBase').textContent = p.noteBase;
+    document.getElementById('productDetails').innerHTML = p.details;
+    renderRelated(p.related);
   </script>
 
 </body>
